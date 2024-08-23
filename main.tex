@@ -1,91 +1,108 @@
 \documentclass[12pt,a4paper]{report}
-\usepackage{fontspec} % 加載 fontspec 套件以使用系統字體
-\setmainfont{Microsoft JhengHei UI} % 設定主要字體為微軟正黑體
-% \setmainfont{標楷體} % 設定主要字體為標楷體(xe)
-% \setmainfont{新細明體} % 設定主要字體為新細明體(xe)
-% \setmainfont{GenSenRounded JP R}(lua)
-\usepackage[utf8]{inputenc} % 支援UTF-8編碼
-\usepackage{geometry} % 控制頁面邊界
-\geometry{a4paper, margin=1in} % 設定A4紙張，邊界為1英寸
-
-\usepackage{setspace} % 用來調整行距
-\onehalfspacing
-
-\usepackage{fancyhdr} % 控制頁眉與頁腳
+\usepackage{fontspec}
+\setmainfont{Microsoft JhengHei UI} % 设定中文字体为微軟正黑體
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{a4paper, left=3cm, right=3cm, top=3cm, bottom=3cm} % 设定页面边距
+\usepackage{setspace}
+\onehalfspacing % 1.5倍行距
+\usepackage{fancyhdr}
 \pagestyle{fancy}
-\setlength{\headheight}{14.5pt}
-\fancyfoot[C]{\thepage} % 頁腳中間顯示頁碼
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\usepackage{titlesec}
+\titlespacing*{\chapter}{0pt}{-20pt}{20pt} % 减少章节标题上方的空白
+\usepackage{graphicx}
+\usepackage{tocloft}
 
-\usepackage{titlesec} % 控制章節標題的間距
-\titleformat{\chapter}[display]
- {\normalfont\huge\bfseries}
- {\chaptertitlename\ \thechapter}
- {20pt}
- {\raggedright\Huge}
-\titlespacing*{\chapter}{0pt}{0pt}{40pt} % 調整章節標題的上方和下方留白
-
-% 封面格式
 \begin{document}
 
-\begin{titlepage}
-    \centering
-    \vspace*{1in}
+% 封面
+\begin{center}
+    {\LARGE
+        國立中興大學XXXX學系\\
+        X士學位論文
+    }
+    \vspace{4.8cm}
 
-    {\LARGE \textbf{論文標題}}\\[2cm]
+    {\huge
+        (中   文   論   文   題   目)
+    }
+    \vspace{2cm}
 
-    \textbf{作者名稱}\\
-    學號：12345678\\
-    系所名稱\\
-    學校名稱\\[2cm]
+    {\LARGE
+        (英   文   論   文   題   目)
+    }
+    \vspace{6.2cm}
 
-    \vfill
+    {\LARGE
+        \begin{tabular}{lr}
+          指導教授： & XXX \\
+          研\hspace{0.33cm}究\hspace{0.33cm}生：& XXX
+        \end{tabular}
+    }
+    \vspace{2.9cm}
 
-    \textbf{指導教授：XXX教授}\\[3cm]
+    {\LARGE
+        中華民國XX年XX月
+    }
+\end{center}
 
-    \today\\
+% 空白页
+\newpage
+\thispagestyle{empty}
+\mbox{}
 
-    \vspace*{1cm}
-\end{titlepage}
-
-\clearpage % 封面與正文分開
-
-\pagenumbering{arabic} % 開始頁碼編號
+% 中文书名页
 
 
-\chapter*{簡介} % 無編號章節標題
-\vspace{-1cm} % 調整上方空白，-1cm 可根據需求調整
-\addcontentsline{toc}{chapter}{簡介} % 手動添加到目錄
-這是一個範例的LaTeX文件，展示了如何在LaTeX中顯示中文。
+% 致謝辞
+\newpage
+\chapter*{致謝辞}
+\addcontentsline{toc}{chapter}{致謝辞}
+在此，我要感谢所有在我研究期间提供帮助的人，包括我的导师XXX教授，我的家人，以及所有支持我的朋友和同事。
 
-\chapter*{研究背景} % 無編號章節標題
-\vspace{-1cm} % 調整上方空白
-\addcontentsline{toc}{chapter}{研究背景} % 手動添加到目錄
-這個章節描述了研究的背景、問題的來源及其重要性。
+% 中文摘要
+\newpage
+\chapter*{中文摘要}
+\addcontentsline{toc}{chapter}{中文摘要}
+本研究探討了...（摘要内容）。
 
-\chapter*{文獻回顧} % 無編號章節標題
-\vspace{-1cm} % 調整上方空白
-\addcontentsline{toc}{chapter}{文獻回顧} % 手動添加到目錄
-在這個章節中，將回顧與本研究相關的文獻和研究成果。
+\newpage
+% 英文摘要
+\chapter*{SUMMARY}
+\addcontentsline{toc}{chapter}{SUMMARY}
+This study investigates...（英文摘要内容）。
 
-\chapter*{研究方法} % 無編號章節標題
-\vspace{-1cm} % 調整上方空白
-\addcontentsline{toc}{chapter}{研究方法} % 手動添加到目錄
-此章節介紹本研究所使用的方法、流程和技術。
+% 目次
+\newpage
+\tableofcontents
 
-\chapter*{結果與討論} % 無編號章節標題
-\vspace{-1cm} % 調整上方空白
-\addcontentsline{toc}{chapter}{結果與討論} % 手動添加到目錄
-在這裡呈現研究的結果並進行分析和討論。
+% 正文示例
+\newpage
+\chapter*{第一章 簡介}
+\addcontentsline{toc}{chapter}{第一章 簡介}
+本章將概述研究背景、研究目的及研究方法。
 
-\chapter*{結論與建議} % 無編號章節標題
-\vspace{-1cm} % 調整上方空白
-\addcontentsline{toc}{chapter}{結論與建議} % 手動添加到目錄
-最後，總結研究結果，並提供後續研究的建議。
+\chapter*{第二章 文獻回顧}
+\addcontentsline{toc}{chapter}{第二章 文獻回顧}
+本章回顧了相關的研究文獻，並討論了與本研究相關的理論基礎。
 
-\chapter*{參考文獻} % 無編號章節標題
-\vspace{-1cm} % 調整上方空白
-\addcontentsline{toc}{chapter}{參考文獻} % 手動添加到目錄
-在這個章節中列出所有引用的文獻。
+% 继续添加章节...
 
+\newpage
+% 参考文献
+\chapter*{參考文獻}
+\addcontentsline{toc}{chapter}{參考文獻}
+\begin{itemize}
+    \item [1] 吳聰敏, 吳聰慧 (2005). 《cwTEX 排版系統》, 台北。
+    \item [2] Bringhurst, Robert (1996). The Elements of Typographic Style, Vancouver: Hartley  Marks, 2nd edition.
+\end{itemize}
+
+% 附錄示例
+\newpage
+\chapter*{附錄}
+\addcontentsline{toc}{chapter}{附錄}
+附錄内容示例。
 
 \end{document}
