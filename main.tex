@@ -1,108 +1,126 @@
-\documentclass[12pt,a4paper]{report}
-\usepackage{fontspec}
-\setmainfont{Microsoft JhengHei UI} % 设定中文字体为微軟正黑體
-\usepackage[utf8]{inputenc}
+% main.tex
+\documentclass[12pt,oneside,openany,a4paper]{book}
+ 
 \usepackage{geometry}
-\geometry{a4paper, left=3cm, right=3cm, top=3cm, bottom=3cm} % 设定页面边距
-\usepackage{setspace}
-\onehalfspacing % 1.5倍行距
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot[C]{\thepage}
-\usepackage{titlesec}
-\titlespacing*{\chapter}{0pt}{-20pt}{20pt} % 减少章节标题上方的空白
+\geometry{textheight=20.5cm,top=3cm,bottom=3cm,footskip=1.5cm,
+marginparwidth=2.5cm,left=3cm,right=3cm}
+\usepackage{fontspec}
+\setmainfont{標楷體} % 設定字體
+
+% 章、節、小節名稱設定
+\usepackage[small,sf,center]{titlesec}
+\titleformat{\chapter}[hang]{\centering\Large\rm}{}{0.2cm}{}
+\titlespacing{\chapter}{0cm}{5mm}{5mm}
+\titleformat{\section}[hang]{\large\rm}{}{0.2cm}{}
+\titlespacing{\section}{0cm}{3mm}{5mm}
+\titleformat{\subsection}[hang]{\normalsize\rm}{}{0.3cm}{}
+\titlespacing{\subsection}{0.5cm}{0.2cm}{0.2cm}
+\renewcommand{\chaptername}{}
+\renewcommand{\thechapter}{}
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{}
+% 設定各目次的標題
+\usepackage{titletoc}
+\renewcommand{\contentsname}{目錄}
+\renewcommand{\listfigurename}{圖目次}
+\renewcommand{\listtablename}{表目次}
+
+% 設定圖表標題和排序方式
+\usepackage{caption}
+\renewcommand{\figurename}{圖}
+\renewcommand{\tablename}{表}
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+
+% 附錄標題
+\usepackage{appendix}
+\renewcommand{\appendixpagename}{\Large 附錄}
+
+\usepackage{url}
+\def\UrlFont{\rm}
+% PDF 超連結套件
+\usepackage[colorlinks=true,urlcolor=blue,bookmarks=false]{hyperref}
+
+% 插圖套件
 \usepackage{graphicx}
-\usepackage{tocloft}
+
+% 特殊符號與數學套件
+\usepackage{pifont}
+\usepackage{amsthm}
+\usepackage{amsmath,amssymb}
+
+% 內文基本設定
+\pagestyle{plain}
+\parindent=0.8cm
 
 \begin{document}
 
+\pagenumbering{gobble}
 % 封面
-\begin{center}
-    {\LARGE
-        國立中興大學XXXX學系\\
-        X士學位論文
-    }
-    \vspace{4.8cm}
-
-    {\huge
-        (中   文   論   文   題   目)
-    }
-    \vspace{2cm}
-
-    {\LARGE
-        (英   文   論   文   題   目)
-    }
-    \vspace{6.2cm}
-
-    {\LARGE
-        \begin{tabular}{lr}
-          指導教授： & XXX \\
-          研\hspace{0.33cm}究\hspace{0.33cm}生：& XXX
-        \end{tabular}
-    }
-    \vspace{2.9cm}
-
-    {\LARGE
-        中華民國XX年XX月
-    }
-\end{center}
-
-% 空白页
 \newpage
 \thispagestyle{empty}
-\mbox{}
+\include{ThesisTitle}
 
-% 中文书名页
-
-
-% 致謝辞
+% 空白頁（題贈用）
 \newpage
-\chapter*{致謝辞}
-\addcontentsline{toc}{chapter}{致謝辞}
-在此，我要感谢所有在我研究期间提供帮助的人，包括我的导师XXX教授，我的家人，以及所有支持我的朋友和同事。
+\thispagestyle{empty}
+\begin{center}
+\end{center}
+
+% 書名頁（中文）
+\newpage
+\thispagestyle{empty}
+\include{ThesisTitle}
+
+% 審核頁
+\include{Examine}
+
+% 授權頁 
+\include{Authority}
+
+
+% 誌謝辭
+% \include{Acknowledgment}
 
 % 中文摘要
-\newpage
-\chapter*{中文摘要}
-\addcontentsline{toc}{chapter}{中文摘要}
-本研究探討了...（摘要内容）。
+\include{ChineseAbstract}
 
-\newpage
 % 英文摘要
-\chapter*{SUMMARY}
-\addcontentsline{toc}{chapter}{SUMMARY}
-This study investigates...（英文摘要内容）。
+
+\include{EnglishAbstract}
 
 % 目次
 \newpage
+
 \tableofcontents
 
-% 正文示例
+% 表目次
 \newpage
-\chapter*{第一章 簡介}
-\addcontentsline{toc}{chapter}{第一章 簡介}
-本章將概述研究背景、研究目的及研究方法。
 
-\chapter*{第二章 文獻回顧}
-\addcontentsline{toc}{chapter}{第二章 文獻回顧}
-本章回顧了相關的研究文獻，並討論了與本研究相關的理論基礎。
-
-% 继续添加章节...
-
+\listoftables
+% 圖目次
 \newpage
-% 参考文献
-\chapter*{參考文獻}
-\addcontentsline{toc}{chapter}{參考文獻}
-\begin{itemize}
-    \item [1] 吳聰敏, 吳聰慧 (2005). 《cwTEX 排版系統》, 台北。
-    \item [2] Bringhurst, Robert (1996). The Elements of Typographic Style, Vancouver: Hartley  Marks, 2nd edition.
-\end{itemize}
 
-% 附錄示例
-\newpage
-\chapter*{附錄}
-\addcontentsline{toc}{chapter}{附錄}
-附錄内容示例。
+\listoffigures
+
+\mainmatter
+\setcounter{page}{1} 
+\pagenumbering{arabic}  
+
+% 章節
+\include{Chapter1}
+\include{Chapter2}
+\include{Chapter3}
+% 繼續添加其他章節...
+
+\backmatter
+
+% 參考文獻
+\include{References}
+
+% 附錄
+\appendix
+\include{AppendixA}
+% \include{AppendixB}
 
 \end{document}
