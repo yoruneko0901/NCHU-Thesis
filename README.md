@@ -4,35 +4,35 @@
 
 ## 主文件 (main.tex)
 
-`main.tex` 是此專案的核心文件，它統籌了整個論文的結構。以下是 `main.tex` 的主要功能：
+`[main.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/main.tex)` 是此專案的核心文件，它統籌了整個論文的結構。以下是 `main.tex` 的主要功能：
 
 - 定義論文的排版格式，如字體、行距、頁邊距等。
 - 論文的不同章節、附錄等內容通過 `\include{}` 指令導入各自的獨立文件。
 - 自動生成目錄、表目次、圖目次等。
 
-`main.tex` 文件包含了整篇論文的框架，引用了其他拆分文件來完成具體內容的填充。
+`[main.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/main.tex)` 文件包含了整篇論文的框架，引用了其他拆分文件來完成具體內容的填充。
 
 ## 拆分文件
 
-各個拆分文件負責包含論文的具體內容或特定部分。這些文件被 `main.tex` 引用，使得每個部分的內容更加獨立和模組化。以下是各拆分文件的用途說明：
+各個拆分文件負責包含論文的具體內容或特定部分。這些文件被 `[main.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/main.tex)` 引用，使得每個部分的內容更加獨立和模組化。以下是各拆分文件的用途說明：
 
-- **`ThesisTitle.tex`**: 包含論文的標題頁內容，包括論文題目、作者、指導教授等資訊。
-- **`Examine.tex`**: 審核頁面，包含口試委員、指導教授的簽名頁。
-- **`Authority.tex`**: 授權頁，記錄論文的授權資訊。
-- **`ChineseAbstract.tex`**: 中文摘要，包含論文的研究動機、方法、結果等摘要內容。
-- **`EnglishAbstract.tex`**: 英文摘要，與中文摘要內容相對應的英文描述。
-- **`Chapter1.tex`**: 第一章的內容。
-- **`Chapter2.tex`**: 第二章的內容。
-- **`Chapter3.tex`**: 第三章的內容。
-- **`References.tex`**: 參考文獻列表。
-- **`AppendixA.tex`**: 附錄A的內容。
+- **`[ThesisTitle.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/ThesisTitle.tex)`**: 包含論文的標題頁內容，包括論文題目、作者、指導教授等資訊。
+- **`[Examine.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/Examine.tex)`**: 審核頁面，包含口試委員、指導教授的簽名頁。
+- **`[Authority.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/Authority.tex)`**: 授權頁，記錄論文的授權資訊。
+- **`[ChineseAbstract.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/ChineseAbstract.tex)`**: 中文摘要，包含論文的研究動機、方法、結果等摘要內容。
+- **`[EnglishAbstract.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/EnglishAbstract.tex)`**: 英文摘要，與中文摘要內容相對應的英文描述。
+- **`[Chapter1.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/Chapter1.tex)`**: 第一章的內容。
+- **`[Chapter2.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/Chapter2.tex)`**: 第二章的內容。
+- **`[Chapter3.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/Chapter3.tex)`**: 第三章的內容。
+- **`[References.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/References.tex)`**: 參考文獻列表。
+- **`[AppendixA.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/AppendixA.tex)`**: 附錄A的內容。
 
-這些拆分文件通過 `\include{}` 指令被主文件 `main.tex` 包含在內，使得論文的各個部分得以組織和管理。
+這些拆分文件通過 `\include{}` 指令被主文件 `[main.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/main.tex)` 包含在內，使得論文的各個部分得以組織和管理。
 
 ## 注意事項
 
-- 在編寫各章節和附錄時，請確保格式遵循學校的格式規範，詳細規範請參考文件 `./format reference/F2-65學位論文格式規範-中文版.pdf`。
-- 修改某一章節的內容時，只需更新對應的拆分文件，重新編譯 `main.tex` 即可生成更新後的論文。
+- 在編寫各章節和附錄時，請確保格式遵循學校的格式規範，詳細規範請參考文件 `[./format reference/F2-65學位論文格式規範-中文版.pdf](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/format%20reference/F2-65%E5%AD%B8%E4%BD%8D%E8%AB%96%E6%96%87%E6%A0%BC%E5%BC%8F%E8%A6%8F%E7%AF%84-%E4%B8%AD%E6%96%87%E7%89%88.pdf)`。
+- 修改某一章節的內容時，只需更新對應的拆分文件，重新編譯 `[main.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/main.tex)` 即可生成更新後的論文。
 
 ## 如何使用
 
