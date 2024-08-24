@@ -31,7 +31,7 @@
 
 ## 注意事項
 
-- 在編寫各章節和附錄時，請確保格式遵循學校的格式規範，詳細規範請參考文件 [./format reference/F2-65學位論文格式規範-中文版.pdf](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/format%20reference/F2-65%E5%AD%B8%E4%BD%8D%E8%AB%96%E6%96%87%E6%A0%BC%E5%BC%8F%E8%A6%8F%E7%AF%84-%E4%B8%AD%E6%96%87%E7%89%88.pdf)。
+- 在編寫各章節和附錄時，請確保格式遵循學校的格式規範，詳細規範請參考文件 [F2-65學位論文格式規範-中文版.pdf](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/format%20reference/F2-65%E5%AD%B8%E4%BD%8D%E8%AB%96%E6%96%87%E6%A0%BC%E5%BC%8F%E8%A6%8F%E7%AF%84-%E4%B8%AD%E6%96%87%E7%89%88.pdf)。
 - 修改某一章節的內容時，只需更新對應的拆分文件，重新編譯 `main.tex` 即可生成更新後的論文。
 
 ## 如何使用
