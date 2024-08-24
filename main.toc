@@ -1,6 +1,0 @@
-\contentsline {chapter}{\numberline {}一、第一章標題}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {}二、第二章標題}{2}{chapter.2}%
-\contentsline {chapter}{\numberline {}三、第三章標題}{3}{chapter.3}%
-\contentsline {chapter}{參考文獻}{4}{chapter*.4}%
-\contentsline {chapter}{附錄一 ： 封面樣式（一）}{5}{appendix*.5}%
-\contentsfinish 
