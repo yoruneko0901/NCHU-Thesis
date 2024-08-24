@@ -27,7 +27,7 @@
 - **[References.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/References.tex)**: 參考文獻列表。
 - **[AppendixA.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/AppendixA.tex)**: 附錄A的內容。
 
-這些拆分文件通過 `\include{}` 指令被主文件 `[main.tex](https://github.com/yoruneko0901/NCHU-Thesis/blob/033316977920429a654b370ddc30fcac9330825d/main.tex)` 包含在內，使得論文的各個部分得以組織和管理。
+這些拆分文件通過 `\include{}` 指令被主文件 `main.tex` 包含在內，使得論文的各個部分得以組織和管理。
 
 ## 注意事項
 
