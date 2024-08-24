@@ -37,13 +37,11 @@
 ## 如何使用
 
 1. [下載Tex Live](https://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe) (要下載很久)
-安裝完成後在終端機分別輸入，看到版本訊息有輸出就算安裝成功
+安裝完成後在終端機分別輸入以下指令查看編譯工具有沒有被加入PTAH，看到版本訊息有輸出就算安裝成功
 ```ps
-tex -v
 latex -v
 xelatex -v
 pdflatex -v
-tlmgr info ctex
 ```
 
 2. vscode中安裝 LaTeX Workshop
