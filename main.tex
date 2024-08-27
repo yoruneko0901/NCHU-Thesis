@@ -1,11 +1,19 @@
-% main.tex
 \documentclass[12pt,oneside,openany,a4paper]{book}
- 
+
 \usepackage{geometry}
 \geometry{textheight=20.5cm,top=3cm,bottom=3cm,footskip=1.5cm,
 marginparwidth=2.5cm,left=3cm,right=3cm}
 \usepackage{fontspec}
-\setmainfont{標楷體} % 設定字體
+
+% 設定中文和英文的字體
+\setmainfont{Times New Roman} % 設定英文為 Times New Roman
+\usepackage{xeCJK}
+\setCJKmainfont{標楷體} % 設定中文為 標楷體
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+% 啟用自動換行和微調
+\usepackage{microtype}
 
 % 章、節、小節名稱設定
 \usepackage[small,sf,center]{titlesec}
@@ -49,11 +57,10 @@ marginparwidth=2.5cm,left=3cm,right=3cm}
 \usepackage{amsthm}
 \usepackage{amsmath,amssymb}
 
+\begin{document}
 % 內文基本設定
 \pagestyle{plain}
 \parindent=0.8cm
-
-\begin{document}
 
 \pagenumbering{gobble}
 % 封面
