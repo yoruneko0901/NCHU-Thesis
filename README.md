@@ -127,7 +127,7 @@
       "*.fdb_latexmk"
     ],
   ```
-4. 使用 `git clone https://github.com/yoruneko0901/NCHU-Thesis.git` 下載本專案
+4. 使用 ```ps git clone https://github.com/yoruneko0901/NCHU-Thesis.git``` 下載本專案
 5. 點擊編譯
    ![image](https://github.com/user-attachments/assets/3138d1d1-7c88-4770-88e0-5acda13f2b0a)
 7. 查看編譯好的檔案
