@@ -38,100 +38,103 @@
 
 1. [下載Tex Live](https://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe) (要下載很久)
 安裝完成後在終端機分別輸入以下指令查看編譯工具有沒有被加入PTAH，看到版本訊息有輸出就算安裝成功
-  ```ps
-  latex -v
-  xelatex -v
-  pdflatex -v
-  ```
+    ```ps
+    latex -v
+    xelatex -v
+    pdflatex -v
+    ```
 
 2. vscode中安裝 LaTeX Workshop
 
 3. 編輯vscode的設定
 在settings.json中新增以下設定
-  ```json
-    "latex-workshop.latex.tools": [
+    ```json
+      "latex-workshop.latex.tools": [
+            {
+              "name": "xelatex",
+              "command": "xelatex",
+              "args": [
+                  "-synctex=1",
+                  "-interaction=nonstopmode",
+                  "-file-line-error",
+                  "%DOCFILE%"
+              ]
+          },
           {
-            "name": "xelatex",
-            "command": "xelatex",
+            "name": "lualatex",
+            "command": "lualatex",
             "args": [
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
-                "%DOCFILE%"
-            ]
-        },
-        {
-          "name": "lualatex",
-          "command": "lualatex",
-          "args": [
-              "-synctex=1",
-              "-interaction=nonstopmode",
-              "-file-line-error",
-              "-output-directory=%OUTDIR%",           
-              "%DOC%"
-          ]
-        },
-        {
-            "name": "pdflatex",
-            "command": "pdflatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
+                "-output-directory=%OUTDIR%",           
                 "%DOC%"
             ]
-        }
-    ],
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "xelatex",
-            "tools": [
-                "xelatex"
-            ]
-        },
-        {
-            "name": "lualatex",
-            "tools": [
-                "lualatex"
-            ]
-        },
-        {
-            "name": "pdflatex",
-            "tools": [
-                "pdflatex"
-            ]
-        }
-    ],
-    "latex-workshop.view.pdf.viewer": "tab",
-      
-    "latex-workshop.latex.clean.enabled": true,
-    "latex-workshop.latex.clean.fileTypes": [
-      "*.aux",
-      "*.bbl",
-      "*.blg",
-      "*.idx",
-      "*.ind",
-      "*.lof",
-      "*.lot",
-      "*.out",
-      "*.toc",
-      "*.acn",
-      "*.acr",
-      "*.alg",
-      "*.glg",
-      "*.glo",
-      "*.gls",
-      "*.ist",
-      "*.fls",
-      "*.log",
-      "*.fdb_latexmk"
-    ],
-  ```
-4. 使用 `git clone https://github.com/yoruneko0901/NCHU-Thesis.git` 下載本專案
-5. 點擊編譯
+          },
+          {
+              "name": "pdflatex",
+              "command": "pdflatex",
+              "args": [
+                  "-synctex=1",
+                  "-interaction=nonstopmode",
+                  "-file-line-error",
+                  "%DOC%"
+              ]
+          }
+      ],
+      "latex-workshop.latex.recipes": [
+          {
+              "name": "xelatex",
+              "tools": [
+                  "xelatex"
+              ]
+          },
+          {
+              "name": "lualatex",
+              "tools": [
+                  "lualatex"
+              ]
+          },
+          {
+              "name": "pdflatex",
+              "tools": [
+                  "pdflatex"
+              ]
+          }
+      ],
+      "latex-workshop.view.pdf.viewer": "tab",
+        
+      "latex-workshop.latex.clean.enabled": true,
+      "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk"
+      ],
+    ```
+4. 下載本專案
+   ```ps
+   git clone https://github.com/yoruneko0901/NCHU-Thesis.git
+   ``` 
+8. 點擊編譯
    ![image](https://github.com/user-attachments/assets/3138d1d1-7c88-4770-88e0-5acda13f2b0a)
-7. 查看編譯好的檔案
+9. 查看編譯好的檔案
    ![image](https://github.com/user-attachments/assets/fb85493f-5acb-4a60-8606-8698282b9e36)
-8. 開啟後在左邊修改存檔後會自動編譯更新，可以在右邊實時預覽
+10. 開啟後在左邊修改存檔後會自動編譯更新，可以在右邊實時預覽
    ![image](https://github.com/user-attachments/assets/caf62cd7-277b-4af8-bca6-64a0a950f643)
 
